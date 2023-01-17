@@ -40,7 +40,7 @@ var fTemp5 = document.getElementById('fTemp5');
 var fWind5 = document.getElementById('fWind5');
 var fHumidity5 = document.getElementById('fHumidity5');
 
-//day.js data
+// day.js data
 todaysDate.textContent = dayjs().format('MMM D YYYY');
 fDate1.textContent = dayjs().add(1, 'Day').format('M/DD/YYYY');
 fDate2.textContent = dayjs().add(2, 'Day').format('M/DD/YYYY');
@@ -49,7 +49,7 @@ fDate4.textContent = dayjs().add(4, 'Day').format('M/DD/YYYY');
 fDate5.textContent = dayjs().add(5, 'Day').format('M/DD/YYYY');
 
 
-//this handles the form submission
+// handles form submission
 function handleSearchFormSubmit(event) {
     event.preventDefault();
     var city = document.getElementById('search-city').value;
@@ -61,7 +61,7 @@ function handleSearchFormSubmit(event) {
   searchFormEl.addEventListener('click', handleSearchFormSubmit);
   
   
-  //retrieves OpenWeatherAPI data
+// retrieves OpenWeatherAPI data
   function getWeatherData(city) {
     var latLongURL = 'https://api.openweathermap.org/geo/1.0/direct?q=' + city + '&appid=' + apiKey;
   
@@ -79,7 +79,7 @@ function handleSearchFormSubmit(event) {
       return response.json(); 
     })
     .then(function(cityWeather) {
-      //checks to see if searchedCities array already includes newly searched city. If its not already there it is added and the updated array is saved to local storage.
+        
       if (searchedCities.includes(cityWeather.city.name) == false) {
         searchedCities.push(cityWeather.city.name);
         localStorage.setItem('city', JSON.stringify(searchedCities));
@@ -122,7 +122,7 @@ function handleSearchFormSubmit(event) {
     })
   }
   
-  //retrieves searchedCities array from local storage
+//retrieves searchedCities array from local storage
   var searchedCities = localStorage.getItem('city');
   if (!searchedCities) {
     searchedCities = [];
@@ -131,7 +131,7 @@ function handleSearchFormSubmit(event) {
   }
   
   
-  //renders new search buttons with eventListeners to page based on length of searchedCities array
+// creates search buttons for previously searched cities
   function renderSearchButtons() {
     document.getElementById('searched-cities').innerHTML = '';
     
