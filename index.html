@@ -17,7 +17,7 @@
     <!--search box with search history displayed-->
     <div class="container">
         <div class="row">
-            <div class="col-sm-4 bg-light">
+            <div class="col-sm-4 bg-light" id="search-box">
                 <h4 class="pt-1"><strong>Search for a City:</strong></h4>
                 <div class="input-group mb-3">
                     <input type="text" class="form-control"id="search-city">
@@ -32,9 +32,10 @@
 
     <!--displays the information for what was searched-->
         <div class="col-sm-8">
-            <div class="row ml-2 border border-dark rounded">
+            <div class="row ml-2 border border-dark rounded" id="">
                 <div class="col-sm-12" id="current-weather">
                     <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
+                    <h2><span id="current-date"></span></h2>
                     <p>Temperature:<span class="current" id="temperature"></span></p>
                     <p>Humidity:<span class="current" id="humidity"></span></p> 
                     <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
