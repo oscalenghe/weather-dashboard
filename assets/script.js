@@ -39,3 +39,7 @@ var fImg5 = document.getElementById('fImg5');
 var fTemp5 = document.getElementById('fTemp5'); 
 var fWind5 = document.getElementById('fWind5');
 var fHumidity5 = document.getElementById('fHumidity5');
+
+//day.js data
+
+todaysDate.textContent = dayjs().format('MMM D YYYY');

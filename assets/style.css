@@ -1,7 +1,12 @@
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
 header {
     background-color: black;
     padding: 50px;
-    font-family: 'Raleway', sans-serif;
 }
+
+
 
 
