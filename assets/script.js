@@ -41,5 +41,13 @@ var fWind5 = document.getElementById('fWind5');
 var fHumidity5 = document.getElementById('fHumidity5');
 
 //day.js data
-
 todaysDate.textContent = dayjs().format('MMM D YYYY');
+day1.textContent = dayjs().add(1, 'Day').format('M/DD/YYYY');
+day2.textContent = dayjs().add(2, 'Day').format('M/DD/YYYY');
+day3.textContent = dayjs().add(3, 'Day').format('M/DD/YYYY');
+day4.textContent = dayjs().add(4, 'Day').format('M/DD/YYYY');
+day5.textContent = dayjs().add(5, 'Day').format('M/DD/YYYY');
+
+
+
+
