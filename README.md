@@ -7,7 +7,7 @@ Screenshot of application:
 ![image](https://user-images.githubusercontent.com/42279508/213035698-4f226fe0-3eae-4f09-a63a-5ba3881b2a03.png)
 
 # Usage
-Link to deployed page:
+Link to deployed page: https://oscalenghe.github.io/weather-dashboard/
 
 # License
 See repository information for licensing.
