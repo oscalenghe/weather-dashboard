@@ -79,7 +79,7 @@ function handleSearchFormSubmit(event) {
       return response.json(); 
     })
     .then(function(cityWeather) {
-        
+
       if (searchedCities.includes(cityWeather.city.name) == false) {
         searchedCities.push(cityWeather.city.name);
         localStorage.setItem('city', JSON.stringify(searchedCities));
@@ -129,7 +129,19 @@ function handleSearchFormSubmit(event) {
   } else {
     searchedCities = JSON.parse(searchedCities);
   }
-  
+ 
+// clears local storage and buttons for cities that were stored as history
+  function clearHistory() {
+    var clearButton = document.getElementById('clear-history');
+    var cities = document.getElementById('searched-cities');
+
+    clearButton.addEventListener("click", function(){
+    localStorage.clear();
+    cities.style.display = "none";
+    });
+  }
+
+  clearHistory();
   
 // creates search buttons for previously searched cities
   function renderSearchButtons() {
